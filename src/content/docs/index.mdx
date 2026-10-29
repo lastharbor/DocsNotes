@@ -1,0 +1,55 @@
+---
+title: Notes for DevOps
+description: Конспекты по Linux, сетям, базам данных, виртуализации и MikroTik
+template: splash
+hero:
+  tagline: Личные конспекты по курсам MTCNA, DevOps и Python. То, что пройдено, проверено руками и нужно быстро находить потом.
+  actions:
+    - text: Открыть Linux
+      link: ./linux/
+      icon: right-arrow
+    - text: Скрипты
+      link: ./scripts/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Linux" icon="laptop">
+    Пользователи и права, SSH, мониторинг, процессы, Bash, systemd, диски.
+
+    [Открыть раздел](./linux/)
+  </Card>
+  <Card title="Сети" icon="random">
+    IP, DNS, HTTP, модель TCP/IP, протоколы UDP и TCP.
+
+    [Открыть раздел](./networking/)
+  </Card>
+  <Card title="Базы данных" icon="list-format">
+    Реляционные и нереляционные модели, ACID, BASE, CAP, бэкапы MySQL.
+
+    [Открыть раздел](./databases/)
+  </Card>
+  <Card title="Виртуализация" icon="setting">
+    Proxmox: зависшие ВМ, Wake-on-LAN для ноды.
+
+    [Открыть раздел](./virtualization/)
+  </Card>
+  <Card title="Скрипты" icon="rocket">
+    Готовые решения: CHR на Proxmox, включение ПК через Telegram-бота на MikroTik.
+
+    [Открыть раздел](./scripts/)
+  </Card>
+  <Card title="Ссылки" icon="open-book">
+    Статьи и инструкции, к которым я возвращаюсь: fail2ban, Let's Encrypt, Webmin, ZSH.
+
+    [Открыть раздел](./resources/links/)
+  </Card>
+</CardGrid>
+
+## Как искать
+
+- Нажмите <kbd>/</kbd> или <kbd>Ctrl</kbd>+<kbd>K</kbd>, чтобы открыть поиск по всем страницам.
+- Скриншоты открываются по клику в полный размер.
+- Внизу каждой страницы указана дата последнего изменения.

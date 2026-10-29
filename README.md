@@ -3,26 +3,26 @@
 Конспекты по Linux, сетям, базам данных, виртуализации и MikroTik.
 Сайт: <https://lastharbor.github.io/mkdocs-notes/>
 
-Собирается [Zensical](https://zensical.org/), конфиг в `zensical.toml`, страницы в `docs/`.
+Собирается [Astro Starlight](https://starlight.astro.build/). Конфиг в `astro.config.mjs`, страницы в `src/content/docs/`.
 
 ## Локальный запуск
 
 ```bash
-python -m venv .venv
-.venv/bin/pip install -r requirements.txt   # Windows: .venv\Scripts\pip
-.venv/bin/zensical serve                    # http://localhost:8000
+npm install
+npm run dev      # http://localhost:4321/mkdocs-notes/
 ```
 
-Сборка: `zensical build --clean`, результат в `site/`.
+Сборка: `npm run build`, результат в `dist/`.
 
 ## Структура
 
 | Каталог | Содержимое |
 |---|---|
-| `docs/linux`, `docs/networking`, `docs/databases` | конспекты по темам, картинки рядом в `img/` |
-| `docs/virtualization` | Proxmox |
-| `docs/scripts` | готовые скрипты и разборы, файлы для скачивания в `files/` |
-| `docs/resources` | подборка ссылок |
+| `src/content/docs/linux`, `networking`, `databases` | конспекты по темам, картинки рядом в `img/` |
+| `src/content/docs/virtualization` | Proxmox |
+| `src/content/docs/scripts` | готовые скрипты и разборы |
+| `src/content/docs/resources` | подборка ссылок |
+| `src/assets/installchr.sh` | скрипт для страницы «CHR на Proxmox», он же отдаётся на скачивание |
 
 ## Деплой
 
