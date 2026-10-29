@@ -1,7 +1,7 @@
 # Notes for DevOps
 
 Конспекты по Linux, сетям, базам данных, виртуализации и MikroTik.
-Сайт: <https://lastharbor.github.io/mkdocs-notes/>
+Сайт: <https://lastharbor.github.io/DocsNotes/>
 
 Собирается [Astro Starlight](https://starlight.astro.build/). Конфиг в `astro.config.mjs`, страницы в `src/content/docs/`.
 
@@ -9,7 +9,7 @@
 
 ```bash
 npm install
-npm run dev      # http://localhost:4321/mkdocs-notes/
+npm run dev      # http://localhost:4321/DocsNotes/
 ```
 
 Сборка: `npm run build`, результат в `dist/`.

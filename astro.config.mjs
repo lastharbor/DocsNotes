@@ -5,16 +5,7 @@ import mermaid from 'astro-mermaid';
 
 export default defineConfig({
   site: 'https://lastharbor.github.io',
-  base: '/mkdocs-notes',
-  redirects: {
-    // Astro не добавляет base к адресу назначения, поэтому он указан явно.
-    '/About': '/mkdocs-notes/',
-    '/Dev Ops Basics/DevOps': '/mkdocs-notes/linux/',
-    '/Dev Ops Basics/Proxmox': '/mkdocs-notes/virtualization/proxmox/',
-    '/Scripts/CHR-Script': '/mkdocs-notes/scripts/chr-proxmox/',
-    '/Scripts/WOLMikrotik': '/mkdocs-notes/scripts/telegram-wol/',
-    '/Scripts/Static DNS mikrotik': '/mkdocs-notes/scripts/static-dns/',
-  },
+  base: '/DocsNotes',
   integrations: [
     mermaid({ theme: 'default', autoTheme: true }),
     starlight({
@@ -23,9 +14,9 @@ export default defineConfig({
       defaultLocale: 'root',
       locales: { root: { label: 'Русский', lang: 'ru' } },
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/lastharbor/mkdocs-notes' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/lastharbor/DocsNotes' },
       ],
-      editLink: { baseUrl: 'https://github.com/lastharbor/mkdocs-notes/edit/main/' },
+      editLink: { baseUrl: 'https://github.com/lastharbor/DocsNotes/edit/main/' },
       lastUpdated: true,
       customCss: ['./src/styles/custom.css'],
       plugins: [starlightImageZoom()],
