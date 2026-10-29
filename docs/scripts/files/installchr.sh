@@ -59,6 +59,12 @@ read -p "Enter the VM ID to use: " vmid
 echo ""
 read -p "Enter the VM Name (must be a valid DNS name): " vm_name
 
+# Guard: an empty VM ID would make the rm -rf below wipe the whole images dir
+if ! [[ $vmid =~ ^[0-9]+$ ]] || [ -z "$vm_name" ]; then
+    echo "VM ID must be a number and VM name must not be empty" >&2
+    exit 1
+fi
+
 # Check and recreate storage for VM if necessary
 if [ -d /mnt/pve/large-pool/images/$vmid ]; then
     echo "VM dir exists. Recreating directory..."
